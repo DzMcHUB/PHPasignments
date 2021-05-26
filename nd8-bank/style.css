@@ -1,0 +1,199 @@
+.container {
+    max-width: 1134px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+    height: 100%;
+}
+
+.success_alert {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 10px 20px;
+    border: dotted green 2px;
+    color: green;
+    width: 300px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.failure_alert {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 10px 20px;
+    border: dotted red 2px;
+    color: red;
+    width: 300px;
+    text-align: center;
+}
+
+nav {
+    height: 50px;
+    background-color: gainsboro;
+    display: flex;
+}
+
+nav h2 {
+    align-self: center;
+    margin: 0px 10px 0px 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0px 20px;
+    padding: 5px;
+    align-self: center;
+}
+
+nav div {
+    display: flex;
+    align-self: center;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.input_form {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(156, 152, 152);
+    padding: 20px;
+    height: 30vh;
+    width: 33%;
+    margin: 0px auto;
+}
+
+.input_form label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input_form input {
+    width: 100%;
+}
+
+.input_form div {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input_form div button {
+    background-color: rgb(135, 216, 115);
+    display: inline-block;
+    padding: 0.25em 1em;
+    border: 0.1em solid black;
+    margin: 0px 0.2em 0.2em auto;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.input_form div button:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+@media all and (max-width:30em) {
+    a.input_form div button {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+.account_search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.account_card {
+    margin: 10px;
+    border: solid;
+}
+
+.card_list {
+    padding: 0;
+}
+
+.account_card input {
+    width: 100%;
+}
+
+.account_card div {
+    display: inline-block;
+    width: 40%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.account_card_button {
+    background-color: rgb(238, 52, 52);
+    display: inline-block;
+    padding: 0.25em 1em;
+    border: 0.1em solid black;
+    margin: 0px 0.2em 0.2em 20px;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.account_card_button:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+@media all and (max-width:30em) {
+    a.account_card_button {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+.account_card input {
+    width: auto;
+    margin-left: 10px;
+}
+
+.link {
+    background-color: rgb(238, 52, 52);
+    display: inline-block;
+    padding: 0.25em 1em;
+    border: 0.1em solid black;
+    margin: 15px 0.2em 0.2em 0;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    width: 130px;
+}
+
+a.link:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+@media all and (max-width:30em) {
+    a.link {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+.greenbg {
+    background-color: rgb(83, 221, 83);
+}
+
+.redbg {
+    background-color: rgb(238, 52, 52);
+}
