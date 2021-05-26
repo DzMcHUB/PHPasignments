@@ -41,8 +41,8 @@ if('POST' == $_SERVER['REQUEST_METHOD']){
 
     ob_start();
     if (count($accounts) <= 1){?>
-        <h2 style="text-align:center">Sąskaitų nėra</h2> <?php
-    }
+        <h2 style="text-align:center">Sąskaitų nėra</h2>
+    <?php}
     else{
         foreach($accounts as $key => $user){
             if ($key != 'lastID'){
@@ -68,7 +68,6 @@ if('POST' == $_SERVER['REQUEST_METHOD']){
             }
         }
     }
-
 
     $html = ob_get_contents();
     ob_end_clean();

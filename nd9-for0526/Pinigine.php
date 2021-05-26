@@ -2,8 +2,7 @@
 
 class Pinigine {
 
-    private $popieriniaiPinigai = 0;
-    private $metaliniaiPinigai = 0;
+    private $popieriniaiPinigai = 0, $metaliniaiPinigai = 0;
 
     public function ideti($kiekis){
         if($kiekis <= 2){
