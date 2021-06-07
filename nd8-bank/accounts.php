@@ -75,7 +75,7 @@ if('POST' == $_SERVER['REQUEST_METHOD']){
 
     $response = ['html' => $html];
     header('Content-type: application/json' );
-    echo json_encode($response);
+    // echo json_encode($response);
     die;
 }
 

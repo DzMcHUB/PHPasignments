@@ -40,8 +40,7 @@ echo '<br><br>';
 require __DIR__ .'/Miskas.php';
 require __DIR__ .'/Zveris.php';
 
-$vilkas = new Zveris('vilkas');
-$vilkas->papasakok('Žalia giria');
+$vilkas = new Zveris('vilkas','Žalia giria');
 echo '<br><br>';
 
 

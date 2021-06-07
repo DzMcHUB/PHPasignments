@@ -1,0 +1,300 @@
+.container {
+    max-width: 1134px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+    height: 100%;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body,
+div,
+form,
+input,
+p {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(68, 67, 67);
+}
+
+nav {
+    height: 4em;
+    background-color: #8ebf42;
+    border-radius: 9px;
+    padding: 0.6em;
+    align-items: center;
+    width: 100%;
+}
+
+.nav_left {
+    width: 90%;
+}
+
+nav :first-child div {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0.1em 0.4em;
+    color: rgb(37, 34, 34);
+}
+
+nav input {
+    width: 30%;
+    color: black;
+}
+
+nav label {
+    margin-left: 7.5em;
+    display: inline;
+    color: black;
+    font-size: 16px;
+}
+
+nav a {
+    margin: 0.1em 0.4em;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+ul {
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    border: #8ebf42 solid;
+    margin: 2px 2px;
+    border-radius: 4px;
+    color: rgb(31, 28, 28);
+    width: 32%;
+    padding: 10px;
+}
+
+li div span {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 10px 0px;
+    background: #8ebf42;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 7.8em;
+    text-align: center;
+}
+
+.red {
+    color: rgb(107, 21, 21);
+}
+
+.green {
+    color: rgb(4, 63, 4);
+}
+
+.second {
+    display: flex;
+}
+
+li form {
+    padding: 0;
+    display: block;
+}
+
+li button {
+    width: auto;
+    margin: 0;
+    color: black;
+    padding: 8px;
+    background-color: rgb(212, 90, 90);
+    align-self: baseline;
+    margin-left: 10px;
+}
+
+li button:hover,
+li a:hover {
+    background-color: black;
+    color: white;
+}
+
+li div {
+    width: 100%;
+    margin: 10px 0 0;
+    align-self: baseline;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 400;
+}
+
+h3 {
+    margin: 12px 0;
+    color: #8ebf42;
+}
+
+.main-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+form {
+    width: 50%;
+    padding: 20px;
+}
+
+fieldset {
+    border: none;
+    border-top: 1px solid #8ebf42;
+}
+
+.account-details,
+.personal-details,
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.account-details>div,
+.personal-details>div>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.account-details>div,
+.personal-details>div,
+input,
+label {
+    width: 65%;
+    margin: auto;
+}
+
+.account-details div input:first-of-type {
+    border: none;
+}
+
+label {
+    padding: 0 5px 0 0;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    width: 44%;
+}
+
+input {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.checkbox {
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: none;
+    background: #8ebf42;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+button:hover {
+    background: #82b534;
+}
+
+@media (max-width: 568px) {
+    .account-details>div,
+    .personal-details>div {
+        width: 50%;
+    }
+    label {
+        width: 40%;
+    }
+    input {
+        width: 60%;
+    }
+    select,
+    .children,
+    .gender,
+    .bdate-block {
+        width: calc(60% + 16px);
+    }
+}
+
+.link_button {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 10px 0px;
+    background: rgb(212, 90, 90);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 7.8em;
+    text-align: center;
+    color: white;
+}
+
+.button_flex {
+    display: flex;
+    align-items: baseline;
+}
+
+.button_flex a:hover {
+    background: rgb(173, 59, 59);
+}
+
+.success,
+.error {
+    border: 1px solid;
+    margin: 10px auto;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    align-content: center;
+    width: 45%;
+}
+
+.success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('https://i.imgur.com/Q9BGTuy.png');
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
