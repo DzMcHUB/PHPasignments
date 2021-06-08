@@ -77,5 +77,11 @@ elseif($url[0] === 'login'){
         (new Account)->login();
     }
 }
+elseif ($url[0] === 'filter'){
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        (new Account)->filteredAccounts();
+    }
+}
 
 

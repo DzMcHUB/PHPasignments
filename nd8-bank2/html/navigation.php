@@ -3,13 +3,13 @@
         <div>ANTRAS BANKAS</div>
 
         <?php if ($_SESSION['logged']): ?>
-        <a href="<?= URL ?>">Sąskaitų sąrašas</a>
-        <a href="<?= URL ?>openNew">Nauja sąskaita</a>
+            <a href="<?= URL ?>">Sąskaitų sąrašas</a>
+            <a href="<?= URL ?>openNew">Nauja sąskaita</a>
         <?php endif ?>
 
         <?php if ($GLOBALS['url'][0] === ''): ?>
-        <label for="search">Ieškoti: </label>
-        <input type="search" name="search" placeholder="asmens kodas">
+            <label for="search">Ieškoti: </label>
+            <input type="search" name="search" placeholder="asmens kodas">
         <?php endif ?>
 
     </div>

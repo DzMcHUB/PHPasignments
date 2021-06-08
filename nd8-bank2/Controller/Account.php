@@ -17,7 +17,6 @@ class Account extends Validator {
                 return $a['surname'] <=> $b['surname'];
             }
         });
-
         require DIR . 'html/header.php';
         require DIR . 'html/accountList.php';
         require DIR . 'html/footer.php';
@@ -133,5 +132,16 @@ class Account extends Validator {
             $_SESSION['error'] = 'Neteisinga prisjungimo informacija';
             App::redirect('login');
         }
+    }
+
+    public function filteredAccounts()
+    {   
+        $accounts = Json::getUserData()->showAll();
+        uasort($accounts, function ($a, $b){
+            if(isset($a['surname']) && isset($b['surname'])){
+                return $a['surname'] <=> $b['surname'];
+            }
+        });
+        self::accountFilter($accounts);
     }
 }

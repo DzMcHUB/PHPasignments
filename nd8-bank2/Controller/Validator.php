@@ -134,7 +134,7 @@ class Validator {
         }
     }
 
-    protected static function accountFilter()
+    protected static function accountFilter($accounts)
     {
         $rawData = file_get_contents("php://input");
         $request = json_decode($rawData, 1);
