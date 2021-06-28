@@ -71,12 +71,12 @@ class Validator {
         }
 
         if(isset($inputErrors)){
-            foreach($inputErrors as $index => $val){
+            foreach($inputErrors as $index => $error){
                 if(!$index){
-                    $_SESSION['error'] .= $val. '<br>';
+                    $_SESSION['error'] .= $error. '<br>';
                 }
                 else{
-                    $_SESSION['error'] .= '<br>' .$val. '<br>';
+                    $_SESSION['error'] .= '<br>' .$error. '<br>';
                 }   
             }
             return FALSE;
@@ -138,10 +138,7 @@ class Validator {
     {
         $rawData = file_get_contents("php://input");
         $request = json_decode($rawData, 1);
-
-        if (!isset($request['search'])){
-            $request['search'] = '';
-        }
+        
         $search = $request['search'];
 
         ob_start();
@@ -149,24 +146,7 @@ class Validator {
         foreach($accounts as $index => $user){
             if ($index != 0){
                 if(str_contains ($user['socialNumber'], $search)){
-                    ?>
-                    <li>
-                        <div>
-                            <span>Vardas: <?= $accounts[$index]['name'] ?></span>
-                            <span>Pavardė: <?= $accounts[$index]['surname'] ?></span>
-                            <span>Asmens kodas: <?= $accounts[$index]['socialNumber'] ?></span>
-                            <span>Sąskaitos numeris: <?= $accounts[$index]['accountNumber'] ?></span>
-                            <span>Sąskaitos likutis: <?= $accounts[$index]['balance'] ?> €</span>
-                        </div>
-                        <div>
-                            <form action="<?= URL ?>delete/<?= $accounts[$index]['id'] ?>" method="post">
-                                <button type="submit">Trinti sąskaitą</button>
-                            </form>
-                            <a class="green" href="<?= URL ?>add/<?= $accounts[$index]['id'] ?>">Pridėti lėšų</a>
-                            <a class="red" href="<?= URL ?>sub/<?= $accounts[$index]['id'] ?>">Atsiimti lėšas</a>
-                        </div>
-                    </li>
-                    <?php 
+                    require DIR . 'html/accountCard.php';
                 }
             }
         }

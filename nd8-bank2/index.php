@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 spl_autoload_register(function ($class) {
 
     $prefix = 'Bankas2';
@@ -80,7 +82,7 @@ elseif($url[0] === 'login'){
 elseif ($url[0] === 'filter'){
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        (new Account)->filteredAccounts();
+        (new Account)->filterAccounts();
     }
 }
 

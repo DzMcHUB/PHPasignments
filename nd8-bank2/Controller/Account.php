@@ -114,7 +114,6 @@ class Account extends Validator {
 
     public function login() : void
     {   
-        session_start();
         $_SESSION['logged'] = FALSE;
         require DIR . 'html/header.php';
         require DIR . 'html/login.php';
@@ -123,7 +122,6 @@ class Account extends Validator {
 
     public function loginExe() : void
     {
-        session_start();
         if ((new Login)->verifyLogin($_POST['name'], $_POST['surname'], $_POST['password'])){
             $_SESSION['logged'] = TRUE;
             App::redirect('');
@@ -134,7 +132,7 @@ class Account extends Validator {
         }
     }
 
-    public function filteredAccounts()
+    public function filterAccounts()
     {   
         $accounts = Json::getUserData()->showAll();
         uasort($accounts, function ($a, $b){

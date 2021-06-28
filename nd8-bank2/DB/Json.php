@@ -7,6 +7,7 @@ use Bankas2\DB\DataBase;
 class Json implements DataBase{
 
     private $userData;
+    private static $db;
     private static $json;
 
     public static function getUserData()

@@ -13,7 +13,6 @@ class App {
 
     public static function checkIfLogged() : void
     {   
-        session_start();
         if (!isset($_SESSION['logged']) || $_SESSION['logged'] == FALSE){
             App::redirect('login');
         }
